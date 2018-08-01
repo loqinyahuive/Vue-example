@@ -37,6 +37,8 @@
    ## a. 父传子 子组件通过props接受父组件的参数
    ## b. 子传父 子组件通过emit触发父组件的方法
    ## c. 非父子组件
-   ## //bus.js
-   ## import Vue from 'vue'
-   ## export default new Vue()
+   ### //bus.js
+   ```
+   import Vue from 'vue'
+   export default new Vue()
+   ```
