@@ -25,7 +25,7 @@ export default {
       this.$emit('changeMsg', 'child')
     },
     changeShow () {
-      bus.$emit('setIsShow');
+      bus.$emit('setIsShow')
     }
   },
   mounted () {

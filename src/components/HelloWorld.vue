@@ -16,7 +16,7 @@ export default {
   created () {
     bus.$on('setIsShow', () => {
       this.setIsShow()
-    });
+    })
   },
   methods: {
     setIsShow () {
