@@ -1,4 +1,5 @@
-# Webpack4之下的版本: 参考https://segmentfault.com/a/1190000011853167
+# Webpack4之下的版本: 
+### 参考https://segmentfault.com/a/1190000011853167
 ## yarn add typescript ts-loader
 ## Webpack配置 ./build/webpack.base.conf.js
 ### a. entry入口文件main.js改为main.ts
@@ -62,7 +63,8 @@ import HelloWorld from '@/components/HelloWorld'
 import App from './App.vue'
 import HelloWorld from '@/components/HelloWorld.vue'
 ```
-# webpack4 填坑之路: 请参考 https://blog.csdn.net/w1170375057/article/details/80831801
+# webpack4 填坑之路: 
+### 请参考 https://blog.csdn.net/w1170375057/article/details/80831801
 ### yarn add typescript ts-loader
 
 ### 修改开发环境webpack.dev.conf.js
