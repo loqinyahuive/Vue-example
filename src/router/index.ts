@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import Child from '@/components/Child'
-import Parent from '@/components/Parent'
-import HighstockDemo1 from '@/components/highstock/demo1'
+import HelloWorld from '@/components/HelloWorld.vue'
+import Child from '@/components/Child.vue'
+import Parent from '@/components/Parent.vue'
+import HighstockDemo1 from '@/components/highstock/demo1.vue'
 
 Vue.use(Router)
 
