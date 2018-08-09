@@ -1,4 +1,4 @@
-# Webpack4之下的版本: 
+# Webpack4之下的版本:
 ### 参考https://segmentfault.com/a/1190000011853167
 ## yarn add typescript ts-loader
 ## Webpack配置 ./build/webpack.base.conf.js
@@ -63,7 +63,7 @@ import HelloWorld from '@/components/HelloWorld'
 import App from './App.vue'
 import HelloWorld from '@/components/HelloWorld.vue'
 ```
-# webpack4 填坑之路: 
+# webpack4 填坑之路:
 ### 请参考 https://blog.csdn.net/w1170375057/article/details/80831801
 ### yarn add typescript ts-loader
 
@@ -262,4 +262,41 @@ yarn add webpack-cli --dev
 yarn upgrade extract-text-webpack-plugin@next
 yarn add vue-loader
 yarn add eslint-loader
+```
+
+
+## npm run build 的一些错误 参考： https://blog.csdn.net/harsima/article/details/80819747
+
+### 错误6
+```
+⠙ building for production...(node:64964) DeprecationWarning: Tapable.plugin is deprecated. Use new API on `.hooks` instead
+⠋ building for production.../Users/ni/wt-hermes/example/20180731/vue-demo/node_modules/webpack/lib/TemplatedPathPlugin.js:43
+				throw new Error(
+				^
+
+Error: Path variable [contenthash] not implemented in this context: static/css/[name].[contenthash].css
+```
+
+### 解决方案
+### yarn add mini-css-extract-plugin
+### utils.js 文件中删除extract-text-webpack-plugin, 增加 mini-css-extract-plugin
+```
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+....
+
+return [MiniCssExtractPlugin.loader].concat(loaders)
+```
+### webpack.pro.conf.js 文件中删除extract-text-webpack-plugin, 增加 mini-css-extract-plugin
+```
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+....
+new MiniCssExtractPlugin({
+  // Options similar to the same options in webpackOptions.output
+  // both options are optional
+  filename: utils.assetsPath('css/[name].[chunkhash].css'),
+  chunkFilename: utils.assetsPath('css/[id].[chunkhash].css'),
+}),
+
 ```
