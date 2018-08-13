@@ -300,3 +300,18 @@ new MiniCssExtractPlugin({
 }),
 
 ```
+
+### 将js文件改写成ts文件可能遇到的错误
+
+### 1: tsconfig.json: 添加 "noImplicitAny": false
+```
+implicitly has an 'any' type
+```
+### 2. add package: vue-class-component
+```
+[Vue warn]: Property or method "isShow" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property.
+```
+### 3: tsconfig.json: 添加 "experimentalDecorators": true
+```
+TS1219: Experimental support for decorators is a feature that is subject to change in a future release. Set the 'experimentalDecorators' option to remove this warning.
+```
