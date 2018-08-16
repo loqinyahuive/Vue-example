@@ -3,6 +3,8 @@
     Parent: <input v-model="msg" />
     <br />
     <Child :msg="msg" @changeMsg="changeMsg"/>
+    <Child msg="111" />
+    <Child msg="222" />
     <HelloWorld />
   </div>
 </template>
